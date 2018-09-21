@@ -4,7 +4,7 @@ import logo from '../logo.svg';
 
 const Footer = () => (
     <footer class="footer">
-<div class="bottom">Clicky Game! <img alt="react" src={logo}/></div>
+<div class="bottom"> React Says <img alt="react" src={logo}/></div>
 </footer>
 );
 
