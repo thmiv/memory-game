@@ -10,7 +10,7 @@ const styles = {
 
 const Navbar = () => (
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">React Sayst</a>
+    <a class="navbar-brand" href="#">React Says</a>
     <span style={styles.navTextStyle} class="navbar-text">
       Score: 0 | Top Score: 0
     </span>
