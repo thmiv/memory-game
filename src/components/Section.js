@@ -3,23 +3,27 @@ import "../styles/Section.css";
 import FriendCard from "./game-cards";
 import friends from "./game-cards/gameIcons.json";
 
-const Section = () => (
-  <section className="container">
+class Section extends React.Component {
+  state = {
+    friends
+  };
 
-    <FriendCard image={friends[0].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[2].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
-    <FriendCard image={friends[1].image} />
+  removeFriend = id => {
+    // Filter this.state.friends for friends with an id not equal to the id being removed
+    const friends = this.state.friends.filter(friend => friend.id !== id);
+    // Set this.state.friends equal to the new friends array
+    this.setState({ friends });
+  };
 
-  </section>
-);
+  render() {
+    return (
+      <section className="container">
+        {this.state.friends.map(friend => (
+          <FriendCard image={friend.image} />
+        ))}
+      </section>
+    )
+  }
+}
 
 export default Section;

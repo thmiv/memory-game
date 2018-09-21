@@ -3,8 +3,7 @@ import "../styles/Navbar.css";
 
 const styles = {
   navTextStyle: {
-    margin: "auto",
-    float: "right", 
+    float: "right"
   }
 };
 
