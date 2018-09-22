@@ -5,13 +5,46 @@ import friends from "./game-cards/gameIcons.json";
 
 class Section extends React.Component {
   state = {
-    friends
+    friends,
+    counter: 0
   };
 
+  componentDidMount() {
+    console.log("component mounted");
+    this.shuffleArray(friends);
+  }
+
+  shuffleArray = (friends) => {
+    for (let i = friends.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [friends[i], friends[j]] = [friends[j], friends[i]]; // eslint-disable-line no-param-reassign
+    }
+    return this.setState({ friends })
+}
+
   handleBtnClick = event => {
+    console.log(this.state.counter);
     const btnType = event.target.attributes.getNamedItem("alt").value;
-    this.setState({  });
+    const itemIndex = event.target.attributes.getNamedItem("id").value -1;
+
+
+    friends.forEach(function(ele){
+      
+      if (ele.name === btnType) {
+        ele.beenClicked = true;
+      }
+    });
+    
     console.log(btnType);
+    
+    this.setState({ 
+      friends,
+      counter: this.state.counter + 1
+     });
+
+    this.shuffleArray(friends);
+    
+     console.log(this.state.friends);
   };
 
   render() {
@@ -23,13 +56,12 @@ class Section extends React.Component {
             key={friend.id}
             id={friend.id}
             name={friend.name}
-            shake={false}
             onClick={this.handleBtnClick}
           />
         ))}
       </section>
     )
-  }
+  };
 }
 
 export default Section;
