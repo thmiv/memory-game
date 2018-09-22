@@ -4,9 +4,8 @@ import "../styles/Navbar.css";
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg">
     <span>
-      <a className="navbar-brand" href="">React Says</a>
+      <a className="navbar-brand" href="">React Remember</a>
     </span>
-    
   </nav>
 );
 
