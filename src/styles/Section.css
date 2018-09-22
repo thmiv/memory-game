@@ -30,7 +30,8 @@
   border-radius: 3px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
-  cursor: pointer
+  cursor: pointer;
+  background: #95b1b9;
 }
 
 .click-item:hover {

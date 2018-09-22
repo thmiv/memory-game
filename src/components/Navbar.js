@@ -8,9 +8,12 @@ const styles = {
 };
 
 const Navbar = () => (
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">React Says</a>
-    <span style={styles.navTextStyle} class="navbar-text">
+  <nav className="navbar navbar-expand-lg">
+    <span>
+      <a className="navbar-brand" href="">React Says</a>
+    </span>
+
+    <span style={styles.navTextStyle} className="navbar-text">
       Score: 0 | Top Score: 0
     </span>
   </nav>

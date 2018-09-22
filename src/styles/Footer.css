@@ -1,8 +1,8 @@
 .footer {
-  background: #6956af;
+  background: #b1a794;
   height: 100px;
   position: relative;
-  color: #fff;
+  color: #ffffff;
   overflow: auto
 }
 
@@ -17,8 +17,5 @@
 }
 
 .footer>.bottom>img {
-  width: 20px;
-  position: relative;
-  top: 3px;
-  left: 2px
+  width: 30px;
 }

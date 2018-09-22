@@ -8,18 +8,24 @@ class Section extends React.Component {
     friends
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
+  handleBtnClick = event => {
+    const btnType = event.target.attributes.getNamedItem("alt").value;
+    this.setState({  });
+    console.log(btnType);
   };
 
   render() {
     return (
       <section className="container">
         {this.state.friends.map(friend => (
-          <FriendCard image={friend.image} />
+          <FriendCard
+            image={friend.image}
+            key={friend.id}
+            id={friend.id}
+            name={friend.name}
+            shake={false}
+            onClick={this.handleBtnClick}
+          />
         ))}
       </section>
     )
